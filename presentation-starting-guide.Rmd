@@ -1,0 +1,30 @@
+---
+title: "Presentation Starter Guide"
+author: "Dylan Loader"
+theme: yeti
+output:
+  html_document:
+    df_print: paged
+---
+
+# Motivation
+
+The Xaringan package was designed by Yihui Xie, who is a fantastic software Engineer at RStudio. Xaringan is based on [reveal.js](https://github.com/gnab/remark), with additional support featured for Rmarkdown. When starting with Xaringan I found Yihui's tutorial overly comprehensive with the inclusion of Chinese language functionality and Naruto references, so this is my attempt at a simplified version for reference when trying to quickly develop a presentation.If you want to read the more comprehensive guide it is available here: https://github.com/yihui/xaringan
+
+
+# Installation
+
+```{r,include = FALSE}
+if(!(require('xaringan'))){install.packages('xaringan')};library('xaringan')
+if(!(require('devtools'))){install.packages('devtools')};library('devtools')
+devtools::install_github("gadenbuie/xaringanthemer")
+if(!(require('leaflet'))){install.packages('leaflet')};library('leaflet')
+if(!(require('DT'))){install.packages('DT')};library('DT')
+
+xaringanthemer::mono_light(
+  base_color = "#4582EC",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono")
+)
+```
