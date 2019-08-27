@@ -28,11 +28,70 @@ solarized_dark(
 )
 ```
 
-background-image: [](./presentation-images/stock-background.png)
+# Keyboard Shortcuts for Presentations
+
+* At any time the presentation is open press 'h' for the help menu
+
+* To mirror a presentation to a different screen press:
+  1. **c** to clone the presentation screen
+  2. Drag the newly created window to the required display and hit **f** to enter fullscreen mode
+  3. Click on your personal screen and hit **p** to enter presenter mode
+  
+* The following slides will include presenter notes explaining the process so try hitting 'p' now
+
+
+---
+
+background-size: 100%
+background-image: url(https://media.giphy.com/media/Oo6GWyiWEDgtO/giphy.gif)
 
 ???
 
-Image credit: [](./presentation-images/stock-background.png)
+Xaringan wraps the fantastic reveal.js HTML framework with functionality taken from Markdown. As implied from the crudely animated gif to the left Xaringan provides an alternative to the drag and drop nature of powerpoint. On the other hand Xaringan is more structured and requires a bit more time to master than traditional slide software. 
+
+
+---
+# Markdown Table Template
+
+| Language    | Ease of Use                | Release Year           |
+| :---------- | -------------------------- | ---------------------- |
+| C++         | Intermediate               | 1983                   |
+| Python      | Intermediate               | 1991                   |
+| R           | Intermediate               | 1993                   |
+
+---
+# R Table with code segment
+
+```{r}
+knitr::kable(tail(iris),format = 'html')
+```
+
+---
+# Right Text, Left Image
+
+.pull-left[
+* line 1
+* line 2
+* line 3
+]
+
+.pull-right[![](./presentation-images/right image.jpg)]
+.pull-right[.footnote[[Source: The Practical Dev](https://github.com/thepracticaldev/orly-full-res)]]
+
+---
+# Left Text, Right Image
+
+.footnote[[Source: The Practical Dev](https://github.com/thepracticaldev/orly-full-res)]
+.pull-left[![](./presentation-images/left-image.jpg)]
+
+
+.pull-right[
+* line 1
+* line 2
+* line 3
+]
+
+
 
 ---
 class: center, middle
