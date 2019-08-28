@@ -22,9 +22,11 @@ options(htmltools.dir.version = FALSE)
 if(!(require('devtools'))){install.packages('devtools')};library('devtools')
 devtools::install_github("gadenbuie/xaringanthemer")
 library('xaringanthemer')
-solarized_dark(
-  code_font_family = "Fira Code",
-  code_font_url    = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+xaringanthemer::mono_light(
+  base_color = "#4582EC",
+  header_font_google = google_font("Josefin Sans","600"),
+  text_font_google   = google_font("Montserrat", "400", "400i"),
+  code_font_google   = google_font("Droid Mono")
 )
 ```
 
@@ -47,7 +49,7 @@ background-image: url(https://media.giphy.com/media/Oo6GWyiWEDgtO/giphy.gif)
 
 ???
 
-Xaringan wraps the fantastic reveal.js HTML framework with functionality taken from Markdown. As implied from the crudely animated gif to the left Xaringan provides an alternative to the drag and drop nature of powerpoint. On the other hand Xaringan is more structured and requires a bit more time to master than traditional slide software. 
+Xaringan wraps the fantastic remark.js HTML framework with functionality taken from Markdown. As implied from the crudely animated gif to the left Xaringan provides an alternative to the drag and drop nature of powerpoint. On the other hand Xaringan is more structured and requires a bit more time to master than traditional slide software. 
 
 
 ---
@@ -98,38 +100,26 @@ class: center, middle
 
 # Embedded Youtube Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r6sGWTCMz2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="600" height="415" src="https://www.youtube.com/embed/r6sGWTCMz2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-# Hello World
+# Sequential Slide 
 
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
-```{r include=FALSE}
-devtools::install_github("yihui/xaringan")
-xaringanthemer::mono_light(
-  base_color = "#4582EC"
-)
-```
+We can create a sequential slide by separating each transition with "--"
 
 --
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+* Point 1
 
 --
 
-- Click the `Knit` button to compile it;
+* Point 2
 
 --
 
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
+* Point 3
 
-.footnote[text](link.com)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
-]
 ---
 
 # Hello Ninja
